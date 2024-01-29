@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.springcambio.moedaconversorservico.entities.MoedaConversao;
 
-@FeignClient(name = "moeda-cotacao", url = "localhost:8000")
+// @FeignClient(name = "moeda-cotacao", url = "localhost:8000")
+@FeignClient(name = "moeda-cotacao-servico")
 public interface MoedaCotacaoProxy {
 
     @GetMapping("/moeda-cotacao/de/{de}/para/{para}")
